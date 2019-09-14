@@ -1,0 +1,24 @@
+Fist - R - Mid
+Wave left - F - Light
+Spread - D - Strong
+Wave right - L - Mid
+Fist - U - Strong
+Db tap - L - Mid
+Spread - D - Light
+Db tap - F - Strong
+Wave left - F - Mid
+Fist - R - Mid
+Wave right - F - Strong
+Spread - U - Strong
+Db tap - U - Mid
+Wave left - F - Light
+Wave right - F - Light
+Fist - U - Mid
+Spread - D - Mid
+Db tap - R - Strong
+Wave left - F - Light
+Wave right - U - Strong
+Fist - U - Light
+Db tap - D - Light
+Spread - R - Mid
+Wave left - R - Mid

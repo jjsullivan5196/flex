@@ -1,0 +1,39 @@
+normalize = function(x) {
+  return ((x - min(x)) / (max(x) - min(x)));
+}
+
+snorm = function(x) {
+  x/5.0;
+}
+
+plotsensor = function(mdata, name) {
+  matplot(y = mdata[2:5], type="l", col=c("firebrick","green", "blue", "purple"), main = name, xlab = 'Time', ylab = 'Voltage Drop', lwd=4, lty=1);
+}
+
+znorm <- function(ts){
+  ts.mean <- mean(ts)
+  ts.dev <- sd(ts)
+  (ts - ts.mean)/ts.dev
+}
+
+saveslice = function(mdata, name) {
+  zz = textConnection("nnl", "w");
+  write.table(mdata, file = zz, row.names=FALSE, col.names=FALSE, sep=",");
+  close(zz);
+  cat(paste(nnl, collapse='\n'), file = name, sep='');
+}
+
+normdata = function(x, nfunc = scale) {
+  tr = as.data.frame(lapply(x[2:5], nfunc(center = TRUE, scale = TRUE)));
+  data.frame(V1 = x$V1, V2 = tr$V2, V3 = tr$V3, V4 = tr$V4, V5 = tr$V5);
+}
+
+munge = function(x) {
+  dirstring = paste(x, "-znorm", sep="");
+  files = sapply(list.files(x, "*.csv"), function (y) { paste(x, y, sep="/") });
+  tbls = lapply(files, read.csv, FALSE);
+  trtbls = lapply(tbls, normdata);
+  dir.create(dirstring);
+  files = sapply(list.files(x, "*.csv"), function (y) { paste(dirstring, y, sep="/") });
+  mapply(saveslice, trtbls, files);
+}

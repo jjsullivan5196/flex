@@ -1,0 +1,24 @@
+Spread - U - Strong
+Db tap - U - Mid
+Wave right - D - Strong - WIGGLE
+Wave left - D - Light
+Wave right - D - Light
+Fist - U - Mid
+Spread - F - Mid - WIGGLE
+Db tap - L - Strong
+Wave left - D - Light
+Fist - L - Mid
+Wave left - D - Light - WIGGLE
+Spread - F - Strong
+Wave right - R - Mid
+Fist - U - Strong
+Db tap - R - Mid - WIGGLE
+Spread - F - Light
+Db tap - D - Strong
+Wave left - D - Mid
+Fist - L - Mid
+Wave right - U - Strong
+Fist - U - Light
+Db tap - F - Light - WIGGLE
+Spread - L - Mid
+Wave left - L - Mid
